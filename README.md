@@ -1,1 +1,1 @@
-# EX_IPM_8
+# Zadanie 8 IPM
