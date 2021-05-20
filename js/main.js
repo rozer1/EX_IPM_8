@@ -82,15 +82,15 @@ function showCustomers(e){
 		var cursor = e.target.result;
 		if(cursor){
 			output += "<tr id='customer_"+cursor.value.id+"'>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='name' data-id='"+cursor.value.id+"'>"+cursor.value.name+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='city' data-id='"+cursor.value.id+"'>"+cursor.value.city+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='adress' data-id='"+cursor.value.id+"'>"+cursor.value.adress+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='email' data-id='"+cursor.value.id+"'>"+cursor.value.email+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='postal_code' data-id='"+cursor.value.id+"'>"+cursor.value.postal_code+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='nip_number' data-id='"+cursor.value.id+"'>"+cursor.value.nip_number+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='phone_number' data-id='"+cursor.value.id+"'>"+cursor.value.phone_number+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='id_card' data-id='"+cursor.value.id+"'>"+cursor.value.id_card+"</span></td>";
-			output += "<td><span class='cursor customer' contenteditable='true' data-field='image_url' data-id='"+cursor.value.id+"'>"+cursor.value.image_url+"</span></td>";
+			output += "<td><input type='button' style='width:100%; height:100%;' value='Image' onclick='deleteRow(\"{$rec['memberID']}\")'/></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='name' data-id='"+cursor.value.id+"'>"+cursor.value.name+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='city' data-id='"+cursor.value.id+"'>"+cursor.value.city+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='adress' data-id='"+cursor.value.id+"'>"+cursor.value.adress+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='email' data-id='"+cursor.value.id+"'>"+cursor.value.email+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='postal_code' data-id='"+cursor.value.id+"'>"+cursor.value.postal_code+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='nip_number' data-id='"+cursor.value.id+"'>"+cursor.value.nip_number+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='phone_number' data-id='"+cursor.value.id+"'>"+cursor.value.phone_number+"</span></td>";
+			output += "<td><span style='white-space: nowrap' class='cursor customer' contenteditable='true' data-field='id_card' data-id='"+cursor.value.id+"'>"+cursor.value.id_card+"</span></td>";
 			output += "<td><a onclick='removeCustomer("+cursor.value.id+")' href=''>Delete</a></td>";
 			output += "</tr>";
 			cursor.continue();
